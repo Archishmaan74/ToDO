@@ -27,6 +27,19 @@ router.get('/display',(req,res)=>{
     })
 })
 
+router.get('/displayone',(req,res)=>{
+    console.log("Get task sno API getting hit...");
+    dbConnection.collection('tasks').find({sno:req.body.sno}).toArray((err,data)=>{
+        if(err){
+            console.log("Cannot fetch one task...");
+        }
+        else{
+            res.send(data[0])
+            console.log("Fetching one task...");
+        }
+    })
+})
+
 router.post('/add',(req,res)=>{
     console.log("Add task API getting hit...");
     dbConnection.collection('tasks').find({sno:req.body.sno}).toArray((err,data)=>{
@@ -56,6 +69,19 @@ router.post('/edit',(req,res)=>{
             else{
                 console.log("Cannot edit...");
             }
+        }
+    })
+})
+
+router.post('/delete',(req,res)=>{
+    console.log("Delete task API getting hit...");
+    dbConnection.collection('tasks').find({sno:req.body.sno}).toArray((err,data)=>{
+        if(err){
+            console.log("Cannot delete task...");
+        }
+        else{
+            dbConnection.collection('tasks').deleteOne({sno:req.body.sno})
+            res.send("Task deleted...")
         }
     })
 })
