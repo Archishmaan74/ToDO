@@ -7,12 +7,14 @@ import { AddtasksComponent } from './addtasks/addtasks.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddtasksComponent,
-    TasksComponent
+    TasksComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

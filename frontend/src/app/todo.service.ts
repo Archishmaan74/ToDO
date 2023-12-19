@@ -13,4 +13,12 @@ export class TodoService {
   getTasks(){
     return this.httpClient.get("http://localhost:3000/display")
   }
+
+  addTask(task: any){
+    return this.httpClient.post("http://localhost:3000/add",task)
+  }
+
+  editTask(task: any){
+    return this.httpClient.post("http://localhost:3000/edit",task)
+  }
 }
