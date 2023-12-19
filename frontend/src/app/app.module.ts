@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddtasksComponent } from './addtasks/addtasks.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { EdittasksComponent } from './edittasks/edittasks.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 
@@ -13,8 +12,7 @@ import { HttpClientModule } from "@angular/common/http";
   declarations: [
     AppComponent,
     AddtasksComponent,
-    TasksComponent,
-    EdittasksComponent
+    TasksComponent
   ],
   imports: [
     BrowserModule,
