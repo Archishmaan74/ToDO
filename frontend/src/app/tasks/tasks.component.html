@@ -12,9 +12,13 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let t of tasks">
             <tr>
-
+                <td>{{t.sno}}</td>
+                <td>{{t.task}}</td>
+                <td>{{t.date}}</td>
+                <td>{{t.time}}</td>
+                <td></td>
             </tr>
         </tbody>
     </table>
