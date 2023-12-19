@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AddtasksComponent } from './addtasks/addtasks.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { EdittasksComponent } from './edittasks/edittasks.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EdittasksComponent } from './edittasks/edittasks.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
