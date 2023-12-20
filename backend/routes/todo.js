@@ -62,7 +62,8 @@ router.post('/edit',(req,res)=>{
         }
         else{
             if(data.length > 0){
-                dbConnection.collection('tasks').updateOne({sno:req.body.sno},{$set:{...req.body}})
+                let {_id,...rest}=req.body
+                dbConnection.collection('tasks').updateOne({sno:req.body.sno},{$set:{...rest}})
                 res.send("Editted task...")
             }
             else{
