@@ -9,10 +9,13 @@ const routes: Routes = [
     path: "", component: TasksComponent
   },
   {
-    path: "addtasks", component: AddtasksComponent
+    path: "tasks", component: TasksComponent
   },
   {
-    path: "edittasks", component: EditComponent
+    path: "tasks/:SNO", component: EditComponent
+  },
+  {
+    path: "addtasks", component: AddtasksComponent
   }
 ];
 

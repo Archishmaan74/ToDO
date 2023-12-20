@@ -2,5 +2,9 @@
     <h2>Edit Task</h2>
 </div>
 <div class="container-fluid" style="width: 700px;">
-    <input type="text" >
+   S.No <input type="text" [(ngModel)]="tasks.sno" required><br>
+   Task <input type="text" [(ngModel)]="tasks.task" required><br>
+   Date <input type="text" [(ngModel)]="tasks.date" required><br>
+   Time <input type="text" [(ngModel)]="tasks.time" required><br><br>
+   <button class="btn btn-outline-primary">Edit</button>
 </div>
