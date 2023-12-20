@@ -27,9 +27,8 @@ router.get('/display',(req,res)=>{
     })
 })
 
-router.get('/displayone',(req,res)=>{
-    console.log("Get task sno API getting hit...");
-    dbConnection.collection('tasks').find({sno:req.body.sno}).toArray((err,data)=>{
+router.get('/displayone/:sno',(req,res)=>{
+    dbConnection.collection('tasks').find({sno:parseInt(req.params.sno)}).toArray((err,data)=>{
         if(err){
             console.log("Cannot fetch one task...");
         }
