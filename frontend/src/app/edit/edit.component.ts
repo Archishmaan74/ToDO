@@ -16,4 +16,9 @@ export class EditComponent {
       })
     })
   }
+
+  editTask(tasks: any){
+    this.todoService.editTask(tasks).subscribe(tasks)
+    alert("Task Editted Successfully!")
+  }
 }

@@ -6,6 +6,6 @@
    Task: <input style="margin-left: 4px;" type="text" [(ngModel)]="tasks.task" required><br><br>
    Date: <input type="text" [(ngModel)]="tasks.date" required><br><br>
    Time: <input type="text" [(ngModel)]="tasks.time" required><br><br>
-   <button class="btn btn-outline-primary">Edit</button>
+   <button class="btn btn-outline-primary" (click)="editTask(tasks)" [routerLink]="['/tasks']">Edit</button>
    <br><br>
 </div>

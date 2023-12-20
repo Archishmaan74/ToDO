@@ -15,4 +15,11 @@ export class TasksComponent {
       console.log("Cannot fetch data...");
     })
   }
+
+  deleteTask(tasks: any){
+    this.todoService.deleteTask(tasks).subscribe(tasks)
+    location.reload()
+    alert("Task Deleted Successfully!")
+  }
+
 }

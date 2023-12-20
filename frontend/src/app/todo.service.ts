@@ -25,4 +25,8 @@ export class TodoService {
   editTask(task: any){
     return this.httpClient.post("http://localhost:3000/edit",task)
   }
+
+  deleteTask(task: any){
+    return this.httpClient.post("http://localhost:3000/delete",task)
+  }
 }
