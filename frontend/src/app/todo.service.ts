@@ -14,8 +14,8 @@ export class TodoService {
     return this.httpClient.get("http://localhost:3000/display")
   }
 
-  getPartTask(sno: any){
-    return this.httpClient.get("http://localhost:3000/displayone")
+  getPartTask(sno:number){
+    return this.httpClient.get("http://localhost:3000/displayone/"+sno)
   }
 
   addTask(task: any){

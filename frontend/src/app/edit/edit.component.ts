@@ -8,12 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent {
-  clickedSno: any
   tasks: any
   constructor(private aRoute : ActivatedRoute ,private todoService : TodoService){
     aRoute.params.subscribe((data)=>{
-      this.clickedSno = data['SNO']
-      this.tasks = this.todoService.getPartTask(this.clickedSno)
+      this.todoService.getPartTask(data['SNO']).subscribe((data) =>{
+        this.tasks = data
+      })
     })
   }
 }
