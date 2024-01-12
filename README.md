@@ -13,7 +13,7 @@ To test, contribute or just see what we did follow few easy steps:
 - for cross origin resource sharing use `npm i cors` in backend
 - enjoy!
 
-MEAN stack website for daily to-do tasks maintenance. Properties provided:- <br />
+MEAN stack website for daily to-do tasks maintenance. Properties:- <br />
 - Single Page Application (used AngularJS routing)
 - Database Maintaned named as EMS and collection as employee (using mongodb)
 
